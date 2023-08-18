@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+	.a1
+	{
+	position:static;
+	border-radius:2px;
+	margin:auto;
+	padding:10px;
+	width:95%;
+	height:auto;
+	background-color:#77ab91;
+	}
+
+	.a2
+	{
+	border: solid grey;
+	border-radius:2px;
+	margin:auto;
+	padding:10px;
+	width:95%;
+	height:auto;
+	background-color:white;
+	}
+
+	.image1
+	{
+	min-width:300px;
+	height:180px;
+	object-fit:cover;
+	}
+
+	.container
+	{
+	border-radius:2px;
+	position:relative;
+	padding:6px;
+	width:85%;
+	height:auto;
+	background-color:#e4e4e4;
+	}
+</style>
+
+<body style="font-family:century gothic;">
+<div class="container">
+    <div class="row1">
+        <div class="col-sm-12">
+	    <br><div class="a1">
+            {% block body1 %}
+            {% endblock %}
+            </div>
+	    </div>
+    </div>
+    <div class="row2">
+	    <div class="col-sm-12">
+            <br><div class="a2">
+            {% block body2 %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</head>
+</html>

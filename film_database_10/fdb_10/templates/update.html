@@ -1,0 +1,16 @@
+	<title>
+        Update Details
+	</title>
+
+{% extends "base.html" %}
+    {% block body1 %}
+        <h1 style="margin-left:25px;">Update Details</h1>
+    {% endblock %}
+
+{% block body2 %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit">
+</form>
+{% endblock %}

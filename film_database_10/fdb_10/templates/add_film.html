@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>
+        Add a film
+	</title>
+</head>
+<style>
+	.a1
+	{
+	position:static;
+	border-radius:2px;
+	margin:auto;
+	padding:10px;
+	width:95%;
+	height:auto;
+	background-color:#77ab91;
+	}
+
+	.a2
+	{
+	border: solid grey;
+	border-radius:2px;
+	margin:auto;
+	padding:10px;
+	width:95%;
+	height:auto;
+	background-color:white;
+	}
+
+	.image1
+	{
+	min-width:300px;
+	height:180px;
+	object-fit:cover;
+	}
+
+	.container
+	{
+	border-radius:2px;
+	position:relative;
+	padding:6px;
+	width:85%;
+	height:100%;
+	background-color:#e4e4e4;
+	}
+</style>
+
+<body style="font-family:century gothic;">
+<div class="container">
+    <div class="row1">
+        <div class="col-sm-12">
+	    <br><div class="a1">
+                <h1 style="margin-left:25px;">Add a film</h1>
+            </div>
+	    </div>
+    </div>
+    <div class="row2">
+	    <div class="col-sm-12">
+            <br><div class="a2">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Name of film"><br><br>
+                <input type="text" name="year" placeholder="Year of Release"><br><br>
+                <input type="text" name="genre" placeholder="Genre"><br><br>
+                <input type="text" name="prate" placeholder="CBFC Rating"><br><br>
+                <input type="text" name="cast" placeholder="Cast"><br><br>
+                <input type="text" name="dir" placeholder="Director"><br><br>
+                <input type="text" name="plot" placeholder="Plot"><br><br>
+                <input type="file" name="img"><br><br>
+                <input type="submit">
+            </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</head>
+</html>

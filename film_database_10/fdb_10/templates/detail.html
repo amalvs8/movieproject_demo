@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>
+        {{film_list.f_name}}
+	</title>
+</head>
+<style>
+	.a1
+	{
+	position:static;
+	border-radius:1px;
+	margin:auto;
+	padding:10px;
+	width:95%;
+	height:auto;
+	background-color:#77ab91;
+	}
+
+	.a2
+	{
+	border: solid grey;
+	border-radius:1px;
+	margin:auto;
+	padding:10px;
+	width:95%;
+	height:auto;
+	background-color:white;
+	}
+
+	.image1
+	{
+	min-width:300px;
+	height:180px;
+	object-fit:cover;
+	}
+
+	.container
+	{
+	border-radius:1px;
+	position:relative;
+	padding:6px;
+	width:85%;
+	height:100%;
+	background-color:#e4e4e4;
+	}
+</style>
+
+<body style="font-family:century gothic;">
+<div class="container">
+    <div class="row1">
+        <div class="col-sm-12">
+	    <br><div class="a1">
+                <h1 style="margin-left:25px;">{{film_list.f_name}}</h1>
+            </div>
+	    </div>
+    </div>
+    <div class="row2">
+	    <div class="col-sm-12">
+            <br><div class="a2">
+            <img src="{{film_list.f_img.url}}" class="image1">
+            <h3 style="font-size:18px;">{{film_list.f_name}}</h3>
+            <h4 style="font-size:14px;">{{film_list.f_year}}</h4>
+            <h5 style="font-size:10px;">{{film_list.f_genre}} | {{film_list.f_prate}}</h5>
+            <h5 style="font-size:12px;">Director: {{film_list.f_dir}}</h5>
+            <h5 style="font-size:12px;">Cast: {{film_list.f_cast}}</h5>
+            <p style="font-size:12px;">Plot:<br>{{film_list.f_plot}}</p>
+            <a href="{% url 'filmapp:update' film_list.id %}">Update</a><br>
+            <a href="{% url 'filmapp:delete' film_list.id %}">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</head>
+</html>

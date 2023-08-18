@@ -1,0 +1,15 @@
+	<title>
+        Delete Film
+	</title>
+{% extends "base.html" %}
+    {% block body1 %}
+        <h1 style="margin-left:25px;">Delete Film</h1>
+    {% endblock %}
+
+{% block body2 %}
+<form method="POST">
+  {% csrf_token %}
+  Do you want to delete the film?
+  <input type="submit">
+</form>
+{% endblock %}
